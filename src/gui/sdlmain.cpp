@@ -1860,7 +1860,7 @@ int main(int argc, char* argv[]) {
 		if(control->cmdline->FindExist("-resetmapper")) erasemapperfile();
 
 		/* Can't disable the console with debugger enabled */
-#if defined(WIN32) && !(C_DEBUG)
+#if defined(WIN32) && !(C_DEBUG) && false
 		if (control->cmdline->FindExist("-noconsole")) {
 			FreeConsole();
 			/* Redirect standard input and standard output */
