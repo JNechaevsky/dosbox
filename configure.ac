@@ -390,7 +390,7 @@ AC_CHECK_HEADER(png.h,have_png_h=yes,)
 AC_CHECK_LIB(png, png_get_io_ptr, have_png_lib=yes, ,-lz)
 if test x$have_png_lib = xyes -a x$have_png_h = xyes ; then
   LIBS="$LIBS -lpng -lz"
-  AC_DEFINE(C_SSHOT,1)
+  AC_DEFINE(C_SSHOT,0)
 else
   AC_MSG_WARN([Can't find libpng, screenshot support disabled])
 fi
